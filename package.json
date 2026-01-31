@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  {
   "scripts": {
-    "build:hugo": "NODE_ENV=production hugo --config config.prod.toml",
+    "build:hugo": "hugo --gc --minify --timeout 60s",
+    "build": "npm run build:datocms && npm run build:hugo && npm run build:assets"
+  }
+
     "build:assets": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
     "build:datocms": "dato dump",
     "build": "npm run build:datocms && npm run build:hugo && npm run build:assets",
