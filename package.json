@@ -1,14 +1,17 @@
-{
-  "name": "creative-inc",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  }
-  "scripts": {
+[
+  {
+    "name": "creative-inc",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  },
+  "scripts",
+  ":",
+  {
     "build:hugo": "hugo --gc --minify --timeout 60s",
     "build": "npm run build:datocms && npm run build:hugo && npm run build:assets"
-  }
-{
+  },
+  {
     "build:assets": "NODE_ENV=production webpack -p --config webpack.prod.config.js",
     "build:datocms": "dato dump",
     "build": "npm run build:datocms && npm run build:hugo && npm run build:assets",
@@ -18,14 +21,18 @@
     "start:livereload": "livereload public -e 'html' -p 5678",
     "start": "mkdir -p content && dato check && concurrently -p \"[{name}]\" -c \"blue,red,green,yellow\" -k -n hugo,webpack,livereload,dato \"npm run start:hugo\" \"npm run start:assets\" \"npm run start:livereload\" \"npm run start:datocms\""
   },
-  "dependencies": {
+  "dependencies",
+  ":",
+  {
     "imagesloaded": "^4.1.4",
     "livereload": "0.8.2",
     "lory.js": "2.5.3",
     "masonry-layout": "^4.2.2",
     "scroll-lazy": "^1.0.3"
   },
-  "devDependencies": {
+  "devDependencies",
+  ":",
+  {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
     "babel-loader": "^8.0.6",
@@ -41,5 +48,6 @@
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
-  }
-}
+  },
+  "û⁸"
+]
