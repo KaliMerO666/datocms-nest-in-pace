@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
-  {
+  }
   "scripts": {
     "build:hugo": "hugo --gc --minify --timeout 60s",
     "build": "npm run build:datocms && npm run build:hugo && npm run build:assets"
