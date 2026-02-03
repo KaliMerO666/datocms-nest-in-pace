@@ -38,12 +38,13 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
   }
-  {
+{
   "scripts": {
     "build:datocms": "dato dump",
-    "build:hugo": "hugo --verbose --debug",
+    "build:hugo": "hugo --config config.prod.toml --verbose",
     "build:assets": "your-asset-command-here",
     "build": "npm run build:datocms && npm run build:hugo && npm run build:assets"
   }
+}
 }
 }
